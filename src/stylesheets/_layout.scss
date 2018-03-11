@@ -1,0 +1,24 @@
+
+.d-none {
+  display: none !important;
+}
+
+.d-sm-none {
+  display: block !important;
+  @media (min-width: 576px) {
+    display: none !important;
+  }
+}
+
+.d-sm-block {
+  display: none !important;
+  @media (min-width: 576px) {
+    display: block !important;
+  }
+}
+
+.position-static {
+  position: static;
+}
+
+

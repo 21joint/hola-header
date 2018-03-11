@@ -1,0 +1,76 @@
+.hlh-search--place {
+  .form-control {
+    border-radius: 0;
+    box-shadow: none;
+    height: 36px;
+    border: none;
+    font-weight: 300;
+    padding-bottom: 0;
+    padding-top: 0;
+    color: #555;
+    padding-right: 36px;
+    &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+      color: #654b0f;
+    }
+    &::-moz-placeholder { /* Firefox 19+ */
+      color: #654b0f;
+    }
+    &:-ms-input-placeholder { /* IE 10+ */
+      color: #654b0f;
+    }
+    &:-moz-placeholder { /* Firefox 18- */
+      color: #654b0f;
+    }
+    &:focus {
+      outline: none;
+      &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+        color: transparent;
+      }
+      &::-moz-placeholder { /* Firefox 19+ */
+        color: transparent;
+      }
+      &:-ms-input-placeholder { /* IE 10+ */
+        color: transparent;
+      }
+      &:-moz-placeholder { /* Firefox 18- */
+        color: transparent;
+      }
+    }
+  }
+}
+.booking-dropdown{
+  label{
+    display: block;
+    cursor: pointer;
+    text-transform: uppercase;
+    padding-bottom: 5px;
+  }
+  input{
+    width: 100%;
+    height: 50px;
+    margin-bottom: 15px;
+    outline: none;
+    text-transform: uppercase;
+    border: none;
+    padding: 0 8px;
+    color: #654b0f;
+    font-size: 15px;
+    &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+      color: #654b0f;
+    }
+    &::-moz-placeholder { /* Firefox 19+ */
+      color: #654b0f;
+    }
+    &:-ms-input-placeholder { /* IE 10+ */
+      color: #654b0f;
+    }
+    &:-moz-placeholder { /* Firefox 18- */
+      color: #654b0f;
+    }
+    &:focus{
+      outline: none;
+    }
+
+  }
+}
+
