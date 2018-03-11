@@ -5,7 +5,7 @@ const fs = require('fs');
 
 
 let createDist,
-    dist = path.join(__dirname, 'dist');
+    dist = path.resolve(__dirname, 'dist');
 
 createDist = (function() {
   if (!fs.existsSync(dist)) {
@@ -16,7 +16,7 @@ createDist = (function() {
 
 module.exports = merge(common, {
   devServer: {
-    contentBase: path.join(__dirname, 'dist'),
+    contentBase: dist,
     watchContentBase: true,
     port: 9999,
   },
