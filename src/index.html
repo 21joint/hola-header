@@ -39,7 +39,7 @@
                   <a href="https://www.visitahoustontexas.com/planea-tu-visita/e-news-signup/">Subscríbete</a>
                 </li>
                 <li>
-                  <div class="dropdown">
+                  <div class="header_widget__rates dropdown">
                     <a role="button" class="dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Reservaciones </a>
                     <div class="dropdown-menu booking-dropdown" aria-labelledby="dropdownMenu1">
                       <form action="https://www.tkqlhce.com/click-8075397-10479934" method="get" target="_blank">
@@ -51,13 +51,13 @@
                         <div class="booking-dropdown--header text-center">
                           <h3 class="m-0  ">RESERVA TU HOTEL</h3>
                         </div>
-                        <div class="form-group">
-                          <label for="ddcheckin">Fech De LLegada:</label>
-                          <input id="ddcheckin" name="InDate" type="text" placeholder="MM/DD/YYYY">
+                        <div class="form-group hasDatepicker">
+                          <label for="hw-checkin">Fech De LLegada:</label>
+                          <input id="hw-checkin" name="hw-checkin" type="text" placeholder="MM/DD/YYYY">
                         </div>
-                        <div class="form-group">
-                          <label for="ddcheckout">Fech De Partida:</label>
-                          <input id="ddcheckout" name="InDate" type="text" placeholder="MM/DD/YYYY">
+                        <div class="form-group hasDatepicker">
+                          <label for="hw-checkout">Fech De Partida:</label>
+                          <input id="hw-checkout" name="hw-checkoute" type="text" placeholder="MM/DD/YYYY">
                         </div>
                         <div class="booking-dropdown--footer">
                           <button type="submit" class="btn-submit">BUSCAR <i class="icon-arrow-right"></i></button>
@@ -88,8 +88,18 @@
                       </form>
                     </div>
                   </div>
-                  <div class="flex-col-auto">
-                    <button type="button navbar-toggler" class="hlh-search--toggle"><i class="icon-search"></i>
+                  <div class="flex-col-auto hidden-md hidden-lg">
+                    <button class="mobile-nav--trigger">
+                      <span>Menu</span>
+                      <span class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                      </span>
+                    </button>
+                  </div>
+                  <div class="flex-col-auto hidden-xs hidden-sm">
+                    <button type="button" class="hlh-search--toggle"><i class="icon-search"></i>
                       <i class="icon-close"></i>
                     </button>
                   </div>
@@ -149,7 +159,33 @@
   </ul>
   <ul class="hlh-mobile--newsletter d-sm-none px-0 p-0">
     <li><a href="">Subscribete</a></li>
-    <li><a href="">Reservaciiones</a></li>
+    <li>
+      <div class="header_widget__rates dropdown">
+        <a role="button" class="dropdown-toggle" type="button" id="checkHotelRates2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Reservaciones </a>
+        <div class="dropdown-menu booking-dropdown" id="selectDaysDD2" aria-labelledby="checkHotelRates2">
+          <form action="https://www.tkqlhce.com/click-8075397-10479934" method="get" target="_blank">
+            <input name="GOTO" type="hidden" value="HOTSEARCH"> <input name="eapid" type="hidden" value="74388">
+            <input name="CityName" type="hidden" value="Houston"> <input name="langid" type="hidden" value="2058">
+            <input name="NumRoom" type="hidden" value="1"> <input name="NumAdult" type="hidden" value="2">
+            <input name="NumChild" type="hidden" value="0">
+            <div class="booking-dropdown--header text-center">
+              <h3 class="m-0  ">RESERVA TU HOTEL</h3>
+            </div>
+            <div class="form-group hasDatepicker">
+              <label for="hw-checkin">Fech De LLegada:</label>
+              <input id="hwmob-checkin" name="hwmob-checkin" type="text" placeholder="MM/DD/YYYY">
+            </div>
+            <div class="form-group hasDatepicker">
+              <label for="hw-checkout">Fech De Partida:</label>
+              <input id="hwmob-checkout" name="hwmob-checkoute" type="text" placeholder="MM/DD/YYYY">
+            </div>
+            <div class="booking-dropdown--footer">
+              <button type="submit" class="btn-submit">BUSCAR <i class="icon-arrow-right"></i></button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </li>
   </ul>
   <div class="hlh-mobile--altsites">
     <a href="">english <i class="icon-share-arrow"></i></a>

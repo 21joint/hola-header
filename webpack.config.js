@@ -1,22 +1,23 @@
-const path = require('path')
-const glob = require('glob')
-const ExtractTextPlugin = require('extract-text-webpack-plugin')
-const CopyWebpackPlugin = require('copy-webpack-plugin')
-const HTMLWebpackPlugin = require('html-webpack-plugin')
-const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin')
-const cssnano = require('cssnano')
-const UglifyJSPlugin = require('uglifyjs-webpack-plugin')
-const CleanWebpackPlugin = require('clean-webpack-plugin')
+const path = require('path');
+const glob = require('glob');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+const HTMLWebpackPlugin = require('html-webpack-plugin');
+const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const cssnano = require('cssnano');
+const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
+
 const getNameFromDir = (dir) => {
-  const lastSlash = dir.lastIndexOf('/')
-  return dir.slice(lastSlash + 1)
-}
+  const lastSlash = dir.lastIndexOf('/');
+  return dir.slice(lastSlash + 1);
+};
 const generateHTMLPlugins = () =>
   glob.sync('./src/**.html').map(dir =>
     new HTMLWebpackPlugin({
       filename: getNameFromDir(dir), // Output
       template: dir, // Input
-    }))
+    }));
 
 module.exports = {
   node: {
@@ -45,7 +46,7 @@ module.exports = {
         loader: 'raw-loader',
       },
       {
-        test: /\.(eot|woff|woff2|svg|ttf)([\?]?.*)$/, loader: 'file-loader'
+        test: /\.(eot|woff|woff2|svg|ttf)([\?]?.*)$/, loader: 'file-loader',
       },
     ],
   },
@@ -60,7 +61,7 @@ module.exports = {
     new OptimizeCssAssetsPlugin({
       assetNameRegExp: /\.css$/g,
       cssProcessor: cssnano,
-      cssProcessorOptions: {discardComments: {removeAll: true}},
+      cssProcessorOptions: { discardComments: { removeAll: true } },
       canPrint: true,
     }),
     new CopyWebpackPlugin([
@@ -87,4 +88,4 @@ module.exports = {
     watchContentBase: true,
     port: 9999,
   },
-}
+};

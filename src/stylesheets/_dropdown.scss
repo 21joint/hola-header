@@ -3,11 +3,16 @@
   border: 1px solid #fff;
   color: #fff;
   display: none;
-  left: 0;
+  left: auto;
+  right: 0;
   padding: 20px 15px;
   width: 320px;
   top: 37px;
   border-radius: 0;
+  @media (min-width: 992px) {
+    left: 0;
+    right: auto;
+  }
   .booking-dropdown--header {
     padding-bottom: 20px;
     margin-bottom: 20px;

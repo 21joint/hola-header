@@ -73,4 +73,22 @@
 
   }
 }
+.form-group.hasDatepicker{
+  position: relative;
+  input{
+    background: #FFF url(/images/calendar.svg) no-repeat right 10px center;
+    background-size: 20px;
+  }
+  .ui-datepicker{
+    top: 100% !important;
+    left: 1px !important;
+    right: 1px !important;
+    width: 100%;
+    padding: 0;
+    border: none;
+    box-shadow: 0 0 0 1px black;
+    margin-top: 10px;
+    z-index: 100 !important;
+  }
+}
 

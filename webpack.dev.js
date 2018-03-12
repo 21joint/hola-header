@@ -5,13 +5,13 @@ const fs = require('fs');
 
 
 let createDist,
-    dist = path.resolve(__dirname, 'dist');
+  dist = path.resolve(__dirname, 'dist');
 
-createDist = (function() {
+createDist = (function () {
   if (!fs.existsSync(dist)) {
     fs.mkdirSync(dist);
   }
-})();
+}());
 
 
 module.exports = merge(common, {

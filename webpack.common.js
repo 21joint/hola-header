@@ -1,18 +1,19 @@
-const path = require('path')
-const glob = require('glob')
-const ExtractTextPlugin = require('extract-text-webpack-plugin')
-const CopyWebpackPlugin = require('copy-webpack-plugin')
-const HTMLWebpackPlugin = require('html-webpack-plugin')
+const path = require('path');
+const glob = require('glob');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+const HTMLWebpackPlugin = require('html-webpack-plugin');
+
 const getNameFromDir = (dir) => {
-  const lastSlash = dir.lastIndexOf('/')
-  return dir.slice(lastSlash + 1)
-}
+  const lastSlash = dir.lastIndexOf('/');
+  return dir.slice(lastSlash + 1);
+};
 const generateHTMLPlugins = () =>
   glob.sync('./src/**/*.html').map(dir =>
     new HTMLWebpackPlugin({
       filename: getNameFromDir(dir), // Output
       template: dir, // Input
-    }))
+    }));
 
 module.exports = {
   node: {
@@ -37,7 +38,7 @@ module.exports = {
       },
       {
         test: /\.(sass|scss)$/,
-        loader: ExtractTextPlugin.extract(['css-loader', 'postcss-loader', 'sass-loader'])
+        loader: ExtractTextPlugin.extract(['css-loader', 'postcss-loader', 'sass-loader']),
       },
       {
         test: /\.html$/,
@@ -45,8 +46,8 @@ module.exports = {
       },
       {
         test: /\.(eot|woff|woff2|svg|ttf)([\?]?.*)$/,
-        loader: 'file-loader'
-      }
+        loader: 'file-loader',
+      },
     ],
   },
   plugins: [
@@ -72,4 +73,4 @@ module.exports = {
     colors: true,
   },
   devtool: 'source-map',
-}
+};
